@@ -7,7 +7,9 @@
     <meta name="application-name" content="Memesite">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= csp_meta_tag %>
+
 
     <%= yield :head %>
 
@@ -23,8 +25,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body lass="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500">
+    <main class="min-h-screen flex items-center justify-center px-6">
       <%= yield %>
     </main>
   </body>
